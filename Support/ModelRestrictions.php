@@ -13,7 +13,7 @@ interface ModelRestrictions
      *   
      * @param \Illuminate\Database\Eloquent\Model $model
      * @param string|null $task
-     * @param \App\Model|null $user
+     * @param \Illuminate\Database\Eloquent\Model|null $user
      * @throws \Illuminate\Auth\Access\AuthorizationException
      */
     public function authorizeUserToPerformTaskOn(Model $model, $task = null, $user = null);
@@ -22,12 +22,12 @@ interface ModelRestrictions
      * Check whether the given user can perform the given task on the model. If no user
      * is provided, capabilities of authenticated user is put into test. 
      * 
-     * A user can access the model, if it belongs to the user itself or if the user is a 
-     * staff and has necessary permission to access it.
+     * A user can access the model, if it belongs to the user itself or if the user has 
+     * necessary permission to access it.
      * 
      * @param \Illuminate\Database\Eloquent\Model $model
      * @param string|null $task
-     * @param \App\Model|null $user
+     * @param \Illuminate\Database\Eloquent\Model|null $user
      * @return bool
      */
     public function userCanPerformTaskOn(Model $model, $task = null, $user = null);
