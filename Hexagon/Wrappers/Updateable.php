@@ -27,7 +27,7 @@ interface Updateable extends ModelWrapper
      * 
      * @param \Illuminate\Support\Collection $data
      * @param \Illuminate\Database\Eloquent\Model|null $model
-     * @return static
+     * @return $this
      * @throws \Illuminate\Validation\ValidationException
      */
     public function validate(Collection $data, $model = null);
@@ -36,7 +36,7 @@ interface Updateable extends ModelWrapper
      * Sets the the given data on the model. This won't save it to the database.
      * 
      * @param \Illuminate\Support\Collection $data
-     * @return static
+     * @return $this
      */
     public function setData(Collection $data);
 
